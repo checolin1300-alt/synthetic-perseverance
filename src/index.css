@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+
 :root {
   /* Default (Light) Theme */
   --bg-color: #F2F4F3;
@@ -12,7 +14,18 @@
   --radius-lg: 24px;
   --radius-md: 16px;
   --radius-sm: 8px;
-  --font-main: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-main: 'Inter', system-ui, sans-serif;
+}
+
+[data-font='serif'] {
+  --font-main: 'Lora', serif;
+}
+
+[data-font='mono'] {
+  --font-main: 'Space Mono', monospace;
+  --radius-lg: 12px;
+  --radius-md: 8px;
+  --radius-sm: 4px;
 }
 
 [data-theme='dark'] {
