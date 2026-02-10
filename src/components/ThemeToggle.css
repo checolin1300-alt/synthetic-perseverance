@@ -1,0 +1,21 @@
+.theme-toggle {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--surface-color);
+    color: var(--text-main);
+    box-shadow: var(--shadow-soft);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.05);
+    background: var(--bg-color);
+}

@@ -1,0 +1,61 @@
+:root {
+  /* Default (Light) Theme */
+  --bg-color: #F2F4F3;
+  --surface-color: #FFFFFF;
+  --primary-color: #7D8F69;
+  --secondary-color: #A9BFA8;
+  --accent-color: #D99382;
+  --text-main: #2C3E50;
+  --text-muted: #7F8C8D;
+  --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.05);
+
+  --radius-lg: 24px;
+  --radius-md: 16px;
+  --radius-sm: 8px;
+  --font-main: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+[data-theme='dark'] {
+  --bg-color: #1a1c1b;
+  /* Dark Green/Grey */
+  --surface-color: #2C3330;
+  --primary-color: #9cb584;
+  /* Lighter Sage for contrast */
+  --secondary-color: #4A5D49;
+  --accent-color: #e0aca0;
+  --text-main: #ecf0f1;
+  --text-muted: #bdc3c7;
+  --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  transition: background-color 0.3s ease;
+}
+
+#root {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  transition: all 0.2s ease;
+}
+
+button:active {
+  transform: scale(0.98);
+}

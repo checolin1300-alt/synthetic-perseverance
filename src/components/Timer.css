@@ -1,0 +1,101 @@
+.timer-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    box-shadow: var(--shadow-soft);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.mode-selector {
+    display: flex;
+    background: var(--bg-color);
+    padding: 0.25rem;
+    border-radius: var(--radius-md);
+    margin-bottom: 2rem;
+}
+
+.mode-btn {
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-sm);
+    font-weight: 500;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.mode-btn.active {
+    background: white;
+    color: var(--text-main);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.timer-display {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.timer-circle {
+    position: relative;
+    width: 260px;
+    height: 260px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress-ring {
+    transform: rotate(-90deg);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.time-text {
+    font-size: 4.5rem;
+    font-weight: 200;
+    color: var(--text-main);
+    z-index: 10;
+    font-feature-settings: "tnum";
+    font-variant-numeric: tabular-nums;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.control-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: transform 0.1s ease, background-color 0.2s;
+    color: var(--text-main);
+}
+
+.control-btn.main {
+    width: 64px;
+    height: 64px;
+    background: var(--mode-color);
+    color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.control-btn.main:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.control-btn.secondary {
+    width: 48px;
+    height: 48px;
+    background: var(--bg-color);
+    color: var(--text-muted);
+}
+
+.control-btn.secondary:hover {
+    background: #e2e4e3;
+}

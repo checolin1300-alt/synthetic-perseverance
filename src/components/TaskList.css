@@ -1,0 +1,123 @@
+.task-list-container {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    box-shadow: var(--shadow-soft);
+    height: 100%;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.task-list-container h2 {
+    margin: 0 0 1.5rem 0;
+    font-weight: 500;
+    color: var(--text-main);
+    font-size: 1.5rem;
+}
+
+.task-input-form {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.task-input {
+    flex: 1;
+    padding: 0.8rem 1rem;
+    border: 2px solid var(--bg-color);
+    border-radius: var(--radius-md);
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+    outline: none;
+}
+
+.task-input:focus {
+    border-color: var(--secondary-color);
+}
+
+.add-task-btn {
+    background: var(--primary-color);
+    color: white;
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-task-btn:disabled {
+    background: var(--bg-color);
+    color: var(--text-muted);
+    cursor: not-allowed;
+}
+
+.tasks-scroll {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem;
+    border-radius: var(--radius-md);
+    transition: background-color 0.2s;
+}
+
+.task-item:hover {
+    background-color: var(--bg-color);
+}
+
+.check-btn {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    color: var(--text-muted);
+}
+
+.task-item.completed .check-btn {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.task-text {
+    flex: 1;
+    font-size: 1rem;
+    color: var(--text-main);
+}
+
+.task-item.completed .task-text {
+    text-decoration: line-through;
+    color: var(--text-muted);
+}
+
+.delete-btn {
+    color: var(--text-muted);
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.task-item:hover .delete-btn {
+    opacity: 1;
+}
+
+.delete-btn:hover {
+    color: var(--accent-color);
+}
+
+.empty-state {
+    text-align: center;
+    color: var(--text-muted);
+    margin-top: 2rem;
+}
